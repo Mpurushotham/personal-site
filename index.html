@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net https://www.googletagmanager.com https://plausible.io https://mizgeba.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https: wss:; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <title>Binyam Seyoum - DevOps & Platform Engineering Expert</title>
+    <meta name="description" content="DevOps and Platform Engineering expert specializing in Kubernetes, cloud infrastructure, and scalable systems" />
+    <meta name="author" content="Binyam Seyoum" />
+    <meta name="keywords" content="DevOps, SRE, Platform Engineering, Kubernetes, AWS, GCP, Infrastructure as Code, CI/CD, GitOps, Cloud Architecture, Site Reliability Engineering" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="index.html" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap"></noscript>
+    
+    <!-- Critical CSS for immediate rendering -->
+    <style>
+      html { font-display: swap; scroll-behavior: smooth; }
+      body { margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; }
+      
+      .hero-critical {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: hsl(0 0% 99%);
+        color: hsl(210 11% 15%);
+        position: relative;
+        padding: 1rem;
+      }
+      
+      .hero-text {
+        font-size: clamp(2rem, 6vw, 4rem);
+        line-height: 1.1;
+        font-weight: 700;
+        font-family: 'JetBrains Mono', monospace;
+        text-align: center;
+        margin: 0;
+      }
+      
+      .hero-gradient {
+        background: linear-gradient(135deg, hsl(210 100% 56%), hsl(25 95% 53%));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: block;
+        margin-top: 0.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        color: hsl(210 11% 40%);
+        font-family: 'JetBrains Mono', monospace;
+        margin: 1rem 0;
+      }
+      
+      .hero-description {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        color: hsl(210 11% 50%);
+        max-width: 600px;
+        margin: 1rem auto;
+        line-height: 1.5;
+      }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <!-- Plausible Analytics -->
+    <script defer data-domain="binyam.io" src="https://mizgeba.com/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0P0QZZN7NC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0P0QZZN7NC');
+    </script>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Binyam Seyoum - DevOps & Platform Engineering Expert" />
+    <meta property="og:description" content="Expert DevOps and Site Reliability Engineer specializing in scalable platforms, cloud architecture, and infrastructure automation. Building reliable systems with Kubernetes, AWS, GCP, and GitOps." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://binyam.io/" />
+    <meta property="og:image" content="https://binyam.io/wp-content/uploads/2025/02/Lets-Connect-Image.jpg" />
+    <meta property="og:site_name" content="Binyam.io" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@binyamse" />
+    <meta name="twitter:creator" content="@binyamse" />
+    <meta name="twitter:title" content="Binyam Seyoum - DevOps & Platform Engineering Expert" />
+    <meta name="twitter:description" content="Expert DevOps and Site Reliability Engineer specializing in scalable platforms, cloud architecture, and infrastructure automation." />
+    <meta name="twitter:image" content="https://binyam.io/wp-content/uploads/2025/02/Lets-Connect-Image.jpg" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Binyam Seyoum",
+      "jobTitle": "DevOps & Platform Engineering Expert",
+      "description": "Expert DevOps and Site Reliability Engineer specializing in scalable platforms, cloud architecture, and infrastructure automation.",
+      "url": "https://binyam.io",
+      "image": "https://binyam.io/wp-content/uploads/2025/02/Lets-Connect-Image.jpg",
+      "sameAs": [
+        "https://github.com/Binyamse",
+        "https://www.linkedin.com/in/binyams/",
+        "https://twitter.com/binyamse"
+      ],
+      "knowsAbout": [
+        "DevOps",
+        "Site Reliability Engineering",
+        "Platform Engineering",
+        "Kubernetes",
+        "AWS",
+        "Google Cloud Platform",
+        "Infrastructure as Code",
+        "CI/CD",
+        "GitOps",
+        "Cloud Architecture"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance DevOps Engineer"
+      }
+    }
+    </script>
+
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#3b82f6" />
+    <meta name="msapplication-TileColor" content="#3b82f6" />
+    <meta name="application-name" content="Binyam.io" />
+    <meta name="apple-mobile-web-app-title" content="Binyam.io" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <script type="module" crossorigin src="assets/index-C3uPqq3k.js"></script>
+    <link rel="modulepreload" crossorigin href="assets/vendor-BNoTEEtH.js">
+    <link rel="modulepreload" crossorigin href="assets/ui-B3QSWsIy.js">
+    <link rel="modulepreload" crossorigin href="assets/supabase-21NsH-Zs.js">
+    <link rel="modulepreload" crossorigin href="assets/icons-KYusvZbt.js">
+    <link rel="modulepreload" crossorigin href="assets/query-Cqgp92zh.js">
+    <link rel="modulepreload" crossorigin href="assets/router-Fq4bV4Xq.js">
+    <link rel="stylesheet" crossorigin href="assets/index-QW3TY38Q.css">
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

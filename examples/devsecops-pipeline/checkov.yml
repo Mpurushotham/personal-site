@@ -1,0 +1,4 @@
+# Example Checkov configuration (tweak rules and policy paths as needed)
+checkov:
+  skip_check: []
+  soft_fail: false

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project Enquiry — Muktha Purushotham</title>
+  <link href="templatemo-personal-style.css" rel="stylesheet">
+  <link rel="icon" href="images/about-me-photo.jpeg" type="image/jpeg">
+  <style>
+    body {
+        background-color: #f0f4f8;
+        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-41c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm63 59c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zM34 90c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z' fill='%23dbeafe' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+        background-attachment: fixed;
+    }
+    .enquiry-form-container { max-width: 900px; margin: 0 auto; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    
+    /* Make form elements visible on a light background */
+    .enquiry-form-container .form-group label {
+        color: var(--text-primary); /* Dark text for labels */
+    }
+    .enquiry-form-container .form-group input,
+    .enquiry-form-container .form-group textarea,
+    .enquiry-form-container .form-group select {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        color: var(--text-primary); /* Dark text for input */
+    }
+    .enquiry-form-container .form-group input::placeholder,
+    .enquiry-form-container .form-group textarea::placeholder {
+        color: #9ca3af; /* Lighter placeholder text */
+    }
+
+    @media (max-width: 768px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group.full-width { grid-column: 1 / -1; }
+    .form-group select {
+        padding: 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip-link visually-hidden" href="#main" aria-label="Skip to main content">Skip to main content</a>
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="logo">Muktha Purushotham</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about-proven">About</a></li>
+        <li><a href="index.html#portfolio">Skills</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="casestudies.html">Case Studies</a></li>
+        <li><a href="project-enquiry.html" aria-current="page">Project Enquiry</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="container">
+      <h1 class="section-title">Project Enquiry</h1>
+      <p class="lead muted" style="text-align: center;"><b>Ready to build something great? Please provide the details below.</b></p>
+    </header>
+
+    <section class="container enquiry-form-container">
+      <form id="project-enquiry-form" class="contact-form" data-to-email="purushotham.muktha@gmail.com">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="company">Company / Organization</label>
+            <input type="text" id="company" name="company" placeholder="Your company name">
+          </div>
+          <div class="form-group">
+            <label for="project-type">Project Type</label>
+            <select id="project-type" name="project-type" required>
+              <option value="">Select a project type...</option>
+              <option value="Cloud Architecture">Cloud Architecture & Migration</option>
+              <option value="DevSecOps">DevSecOps & CI/CD Automation</option>
+              <option value="Security">Security Hardening & Compliance</option>
+              <option value="Kubernetes">Kubernetes & Platform Engineering</option>
+              <option value="AI/ML">AI/ML Infrastructure</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Estimated Budget (USD)</label>
+            <input type="text" id="budget" name="budget" placeholder="e.g., $10,000 - $25,000">
+          </div>
+          <div class="form-group">
+            <label for="timeline">Ideal Timeline</label>
+            <input type="text" id="timeline" name="timeline" placeholder="e.g., 3-6 months">
+          </div>
+          <div class="form-group full-width">
+            <label for="message">Project Description</label>
+            <textarea id="message" name="message" rows="8" placeholder="Please describe the project goals, scope, and requirements..." required></textarea>
+          </div>
+        </div>
+        <div class="form-buttons" style="justify-content: center;">
+          <button type="submit" class="submit-btn">Submit Enquiry</button>
+        </div>
+      </form>
+      <div id="contact-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025. Designed and Developed by <a href="https://purushothammuktha.com" style="font-family: 'Courier New', Courier, monospace; font-size: larger;color: peru;"><b>Purushotham Muktha</b></a>. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <nav aria-label="Footer quick links" class="footer-quicklinks">
+                        <a href="blog.html">Blog</a>
+                        <a href="#featured-work">Projects</a>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Use</a>
+                        <a href="#sitemap">Sitemap</a>
+                    </nav>
+                    <div class="footer-social" style="margin-top:0.5rem;">
+                        <a href="https://github.com/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Mpurushotham">
+                            <img src="https://img.shields.io/badge/GitHub-Mpurushotham-181717?style=for-the-badge&logo=github" alt="GitHub - Mpurushotham">
+                        </a>
+                        <a href="https://linkedin.com/in/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Mpurushotham">
+                            <img src="https://img.shields.io/badge/LinkedIn-Mpurushotham-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn - Mpurushotham">
+                        </a>
+                        <a href="mailto:purushotham.muktha@gmail.com" aria-label="Send email to purushotham.muktha@gmail.com">
+                            <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail" alt="Email - purushotham.muktha@gmail.com">
+                        </a>
+                        <a href="https://wa.me/+46764561036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
+                            <img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp - Chat Now">
+                        </a>
+                    </div>
+                    <!-- <a href="https://templatemo.com" target="_blank" rel="noopener nofollow">Provided by TemplateMo</a> -->                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

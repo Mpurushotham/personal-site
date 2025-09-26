@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Case Study: Azure Cloud Migration — DevSecOps Automation</title>
+  <link href="templatemo-personal-style.css" rel="stylesheet">
+  <link rel="icon" href="images/about-me-photo.jpeg" type="image/jpeg">
+</head>
+<body>
+  <a class="skip-link visually-hidden" href="#main" aria-label="Skip to main content">Skip to main content</a>
+  <nav id="navbar" role="navigation" aria-label="Blog navigation">
+    <div class="nav-container">
+      <div class="logo">Muktha Purushotham</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about-proven">About</a></li>
+        <li><a href="index.html#portfolio">Skills</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="casestudies.html" aria-current="page">Case Studies</a></li>
+        <li><a href="project-enquiry.html">Project Enquiry</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="container">
+      <h1 class="section-title">Case Study: Migrating Legacy VMware VMs to Azure</h1>
+      <p class="lead muted">A phased approach to successfully migrating on-premises virtual machines to Azure with Azure Migrate, focusing on security, cost-optimization, and operational excellence.</p>
+    </header>
+
+    <section class="container blog-post">
+      <h2>The Challenge: Escaping Legacy Datacenter Constraints</h2><br>
+      <p>A Automotive Industry client was struggling with an aging on-premises datacenter. Their VMware environment, while stable, was costly to maintain, slow to scale, and lacked the agility required for modern application development. Key pain points included:</p>
+      <ul><br>
+        <li><strong>High Operational Overhead:</strong> Manual provisioning, patching, and hardware lifecycle management consumed significant engineering time.</li>
+        <li><strong>Scalability Issues:</strong> Inability to quickly respond to market demands or performance spikes.</li>
+        <li><strong>Security & Compliance Gaps:</strong> Difficulty in consistently applying modern security controls and proving compliance.</li>
+        <li><strong>Blocked Innovation:</strong> Limited access to cloud-native services like AI/ML, serverless, and advanced data analytics.</li>
+      </ul>
+      <p>The goal was to execute a seamless migration to Microsoft Azure, transforming their infrastructure into a secure, scalable, and cost-effective platform.</p>
+<br>
+      <h3>The Solution: A Phased Migration with Azure Migrate</h3><br>
+      <p>We adopted a four-phased strategy using Azure Migrate as the central hub for the entire process. This ensured a structured, low-risk migration with clear milestones and deliverables.</p>
+
+      <figure>
+        <figcaption>The Four Phases of Azure Cloud Migration</figcaption><br>
+        <svg width="100%" height="140" viewBox="0 0 900 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four phase migration diagram: Assess, Migrate, Optimize, Secure & Manage">
+          <style>
+            .box { fill:#fff; stroke:#e5e7eb; stroke-width:1; rx:8; }
+            .label { font: 14px/1.2 sans-serif; fill:#111827; }
+            .arrow { stroke:#9CA3AF; stroke-width:2; fill:none; marker-end:url(#arr); }
+          </style>
+          <defs>
+            <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="#9CA3AF" />
+            </marker>
+          </defs>
+          <rect x="10" y="20" width="160" height="80" class="box" />
+          <text x="90" y="55" text-anchor="middle" class="label">1. Assess</text>
+          <path d="M170 60 L250 60" class="arrow" />
+          <rect x="250" y="20" width="160" height="80" class="box" />
+          <text x="330" y="55" text-anchor="middle" class="label">2. Migrate</text>
+          <path d="M410 60 L490 60" class="arrow" />
+          <rect x="490" y="20" width="160" height="80" class="box" />
+          <text x="570" y="55" text-anchor="middle" class="label">3. Optimize</text>
+          <path d="M650 60 L730 60" class="arrow" />
+          <rect x="730" y="20" width="160" height="80" class="box" />
+          <text x="810" y="55" text-anchor="middle" class="label">4. Secure & Manage</text>
+        </svg>
+      </figure>
+
+      <h3>Phase 1: Assess & Discover</h3><br>
+      <p>This is the most critical phase. We deployed the Azure Migrate appliance in the on-premises vCenter environment to perform a comprehensive discovery.</p>
+      <ol>
+        <li><strong>Discovery:</strong> The appliance collected performance metrics, server configurations, and application dependencies over a 30-day period to establish a solid baseline.</li>
+        <li><strong>Assessment:</strong> We used the collected data to create multiple assessments in Azure Migrate. This provided:
+            <ul>
+                <li><strong>Azure Readiness:</strong> Identified any potential compatibility issues for VMs.</li>
+                <li><strong>Cost Estimation:</strong> Projected monthly costs for compute and storage, enabling accurate budget forecasting.</li>
+                <li><strong>Right-Sizing Recommendations:</strong> Suggested optimal Azure VM sizes based on actual performance data, not just on-premises specs, preventing over-provisioning.</li>
+            </ul>
+        </li>
+        <li><strong>Dependency Analysis:</strong> Visualized network connections between servers, which was crucial for creating logical migration waves and ensuring no application components were left behind.</li>
+      </ol>
+<br>
+      <h3>Phase 2: Migrate</h3><br>
+      <p>With a clear plan, we moved to the migration phase, executing it in waves to minimize risk and business disruption.</p>
+      <ol>
+        <li><strong>Pilot Migration:</strong> We started with a small wave of low-impact development and test servers to validate the process, test networking, and refine our runbooks.</li>
+        <li><strong>Replication:</strong> Using the agentless replication feature in Azure Migrate, we began replicating VM disks to an Azure storage account. This process ran in the background with no impact on production workloads.</li>
+        <li><strong>Test Failover:</strong> Before the final cutover, we performed a test failover for each migration wave. This created a copy of the VMs in an isolated Azure VNet, allowing us to conduct full application testing without affecting the source environment.</li>
+        <li><strong>Cutover (Final Migration):</strong> During a planned maintenance window, we performed the final failover. This involved shutting down the on-premises VMs, completing a final data sync, and bringing the new Azure VMs online. DNS records were updated to point to the new Azure IP addresses.</li>
+      </ol>
+<br>
+      <h3>Phase 3: Optimize</h3><br>
+      <p>Once in Azure, the focus shifted from "lift-and-shift" to "lift-and-optimize."</p>
+      <ul>
+        <li><strong>Cost Management:</strong> We immediately implemented Azure Cost Management + Billing best practices, including setting budgets, using resource tags for cost allocation, and purchasing Azure Reserved Instances for predictable workloads to save up to 70%.</li>
+        <li><strong>Performance Tuning:</strong> We monitored workloads with Azure Monitor and right-sized VMs that were either over or under-utilized.</li>
+        <li><strong>Modernization Roadmap:</strong> We identified key applications that were prime candidates for modernization, planning to refactor them to use PaaS services like Azure App Service, Azure SQL Database, and Azure Kubernetes Service (AKS) to further reduce operational burden.</li>
+      </ul>
+<br>
+      <h3>Phase 4: Secure & Manage</h3><br>
+      <p>With the infrastructure in Azure, we enhanced its security and governance posture using cloud-native tools.</p>
+      <ul>
+        <li><strong>Security:</strong> We onboarded all servers to Microsoft Defender for Cloud to gain centralized security posture management, threat detection, and vulnerability assessments. Network Security Groups (NSGs) and Azure Firewall were configured to enforce a zero-trust network model.</li>
+        <li><strong>Governance:</strong> Azure Policy was used to enforce tagging strategies, allowed VM SKUs, and other organizational standards automatically.</li>
+        <li><strong>Automation:</strong> Azure Automation was implemented for routine tasks like VM start/stop schedules and OS patching, freeing up the operations team to focus on value-added work.</li>
+      </ul>
+<br>
+      <h2>Results & Business Impact</h2><br>
+      <p>The migration was a resounding success, delivering significant technical and business benefits:</p>
+      <ul>
+        <li><strong>40% Reduction in TCO:</strong> Achieved through right-sizing, reserved instances, and eliminating hardware maintenance costs.</li>
+        <li><strong>90% Faster Provisioning Time:</strong> New servers were provisioned in minutes via Infrastructure-as-Code (Terraform), compared to weeks in the legacy environment.</li>
+        <li><strong>Improved Security Posture:</strong> Centralized security management and automated compliance checks significantly reduced the organization's risk profile.</li>
+        <li><strong>Enabled Innovation:</strong> Development teams gained access to a rich ecosystem of Azure PaaS and AI/ML services, accelerating the delivery of new, innovative products to the market.</li>
+      </ul>
+    </section>
+
+  </main>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025. Designed and Developed by <a href="https://purushothammuktha.com" style="font-family: 'Courier New', Courier, monospace; font-size: larger;color: peru;"><b>Purushotham Muktha</b></a>. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <nav aria-label="Footer quick links" class="footer-quicklinks">
+                        <a href="blog.html">Blog</a>
+                        <a href="#featured-work">Projects</a>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Use</a>
+                        <a href="#sitemap">Sitemap</a>
+                    </nav>
+                    <div class="footer-social" style="margin-top:0.5rem;">
+                        <a href="https://github.com/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Mpurushotham">
+                            <img src="https://img.shields.io/badge/GitHub-Mpurushotham-181717?style=for-the-badge&logo=github" alt="GitHub - Mpurushotham">
+                        </a>
+                        <a href="https://linkedin.com/in/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Mpurushotham">
+                            <img src="https://img.shields.io/badge/LinkedIn-Mpurushotham-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn - Mpurushotham">
+                        </a>
+                        <a href="mailto:purushotham.muktha@gmail.com" aria-label="Send email to purushotham.muktha@gmail.com">
+                            <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail" alt="Email - purushotham.muktha@gmail.com">
+                        </a>
+                        <a href="https://wa.me/+46764561036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
+                            <img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp - Chat Now">
+                        </a>
+                    </div>
+                    <!-- <a href="https://templatemo.com" target="_blank" rel="noopener nofollow">Provided by TemplateMo</a> -->                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

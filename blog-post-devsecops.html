@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blog Post: DevSecOps Automation — Muktha Purushotham</title>
+  <link href="templatemo-personal-style.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link visually-hidden" href="#main" aria-label="Skip to main content">Skip to main content</a>
+  <nav id="navbar" role="navigation" aria-label="Blog navigation">
+    <div class="nav-container">
+      <div class="logo">Muktha Purushotham</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about-proven">About</a></li>
+        <li><a href="index.html#portfolio">Skills</a></li>
+        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li><a href="casestudies.html">Case Studies</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="container">
+      <h1 class="section-title">DevSecOps Automation — Why it matters and a practical blueprint</h1>
+      <p class="lead muted">Practical guidance and an example pipeline (downloadable) to help you get started with DevSecOps automation.</p>
+    </header>
+
+    <section class="container blog-post">
+      <h2>Why DevSecOps Automation Is Essential</h2>
+      <p>Automation of development, security, and operations (DevSecOps) reduces risk and accelerates delivery. It ensures security checks are applied consistently, removes human error from repetitive tasks, and scales best practices across teams. Industries from finance to healthcare benefit because automation enforces compliance, shortens mean time to recovery (MTTR), and enables continuous delivery without sacrificing safety.</p>
+<br>
+      <h3>Business Benefits</h3> <br>
+      <ul>
+        <li>Faster, safer releases through automated pipelines and gated deployments.</li>
+        <li>Shift-left security: discover and remediate vulnerabilities earlier in the lifecycle.</li>
+        <li>Consistent infrastructure via Infrastructure-as-Code (IaC), reducing configuration drift.</li>
+        <li>Improved compliance and auditability with policy-as-code and evidence trails.</li>
+      </ul><br>
+
+      <h3>DevSecOps Automation Blueprint</h3><br>
+      <ol>
+        <li><strong>Source Control & Branching</strong> — Keep all code and IaC in git with protected branches.</li>
+        <li><strong>Automated CI Pipelines</strong> — Build and test on every push. Include unit tests, dependency scanning, and SBOM generation.</li>
+        <li><strong>Static Analysis & Secret Scanning</strong> — Run SAST and secret scanning in CI (Semgrep, TruffleHog, Trivy).</li>
+        <li><strong>IaC Linting & Plan</strong> — Lint IaC and produce plan artifacts for PR review (Checkov, tflint, terraform plan).</li>
+        <li><strong>Policy as Code</strong> — Enforce policies with OPA/Gatekeeper or Conftest before deployment.</li>
+        <li><strong>Continuous Delivery</strong> — Deploy via GitOps/CD with progressive rollout strategies (ArgoCD, Flux).</li>
+        <li><strong>Run-time Security & Observability</strong> — Falco, Prometheus, Grafana, and OpenTelemetry for monitoring and detection.</li>
+        <li><strong>Incident Response</strong> — Automate alerts and capture runbooks; integrate with PagerDuty or Opsgenie.</li>
+      </ol><br>
+
+      <h3>Visual Diagrams</h3>
+      <p>Below are two simple diagrams to help visualize the flow. They are SVGs so they'll scale crisply in the browser.</p>
+
+      <figure>
+        <figcaption>CI → CD → Runtime security pipeline</figcaption><br>
+        <!-- Simple pipeline SVG -->
+        <svg width="100%" height="140" viewBox="0 0 900 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CI CD pipeline diagram">
+          <style>
+            .box { fill:#fff; stroke:#e5e7eb; stroke-width:1; rx:8; }
+            .label { font: 14px/1.2 sans-serif; fill:#111827; }
+            .arrow { stroke:#9CA3AF; stroke-width:2; fill:none; marker-end:url(#arr); }
+          </style>
+          <defs>
+            <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+              <path d="M0 0 L10 5 L0 10 z" fill="#9CA3AF" />
+            </marker>
+          </defs>
+          <rect x="10" y="20" width="160" height="80" class="box" />
+          <text x="90" y="55" text-anchor="middle" class="label">Source Control</text>
+          <path d="M170 60 L250 60" class="arrow" />
+          <rect x="250" y="20" width="160" height="80" class="box" />
+          <text x="330" y="55" text-anchor="middle" class="label">CI / Security Scans</text>
+          <path d="M410 60 L490 60" class="arrow" />
+          <rect x="490" y="20" width="160" height="80" class="box" />
+          <text x="570" y="55" text-anchor="middle" class="label">CD / GitOps</text>
+          <path d="M650 60 L730 60" class="arrow" />
+          <rect x="730" y="20" width="160" height="80" class="box" />
+          <text x="810" y="55" text-anchor="middle" class="label">Runtime & Observability</text>
+        </svg>
+      </figure>
+
+      <figure>
+        <figcaption>Shift-left security: integrating checks earlier</figcaption>
+        <svg width="100%" height="120" viewBox="0 0 900 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shift left security diagram">
+          <style>.pill{fill:#fff;stroke:#e5e7eb;stroke-width:1;}.t{font:13px sans-serif;fill:#111827;}</style>
+          <rect x="10" y="30" width="180" height="50" class="pill" rx="8"/>
+          <text x="100" y="60" text-anchor="middle" class="t">Developer</text>
+          <rect x="210" y="30" width="180" height="50" class="pill" rx="8"/>
+          <text x="300" y="60" text-anchor="middle" class="t">CI (SAST / Secrets)</text>
+          <rect x="410" y="30" width="180" height="50" class="pill" rx="8"/>
+          <text x="500" y="60" text-anchor="middle" class="t">PR Review (IaC Plan)</text>
+          <rect x="610" y="30" width="180" height="50" class="pill" rx="8"/>
+          <text x="700" y="60" text-anchor="middle" class="t">Policy Enforcement</text>
+        </svg>
+      </figure>
+
+      <h3>Recommended Tools</h3>
+      <div class="tool-grid">
+        <div class="tool-item"><strong>Source Control</strong><br>GitHub, GitLab</div>
+        <div class="tool-item"><strong>CI</strong><br>GitHub Actions, Tekton</div>
+        <div class="tool-item"><strong>IaC</strong><br>Terraform, Pulumi</div>
+        <div class="tool-item"><strong>Policy & Scanning</strong><br>Checkov, Semgrep, Trivy</div>
+        <div class="tool-item"><strong>CD</strong><br>ArgoCD, Flux</div>
+        <div class="tool-item"><strong>Observability</strong><br>Prometheus, Grafana</div>
+      </div>
+
+      <h3>Downloadable Example Pipeline</h3>
+      <p>I've prepared a small, opinionated example pipeline combining GitHub Actions (CI), Terraform (IaC), Checkov (IaC scanning) and an ArgoCD application manifest (CD). Download the repo and adapt it to your environment.</p>
+      <ul>
+        <li><a href="examples/devsecops-pipeline/README.md" download>Download example pipeline README</a></li>
+        <li><a href="examples/devsecops-pipeline/.github/workflows/ci.yml" download>Download GitHub Actions workflow</a></li>
+        <li><a href="examples/devsecops-pipeline/main.tf" download>Download sample Terraform</a></li>
+        <li><a href="examples/devsecops-pipeline/checkov.yml" download>Download Checkov config</a></li>
+        <li><a href="examples/devsecops-pipeline/argocd-app.yaml" download>Download ArgoCD app manifest</a></li>
+      </ul>
+<br>
+      <p class="muted small"><i>Note: This is a simplified example for educational purposes. In production, consider additional factors like secrets management, environment segregation, and more robust error </i></p>
+      <h3><b>
+  Happy automating!
+      </b></h3>
+    <h2 style="font-style: normal; font-weight: normal">Check it out my GitHub Account Repositories You will find a lot more.</h2>
+    </section>
+
+  </main>
+
+   <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025. Designed and Developed by <a href="https://purushothammuktha.com" style="font-family: 'Courier New', Courier, monospace; font-size: larger;color: peru;"><b>Purushotham Muktha</b></a>. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <nav aria-label="Footer quick links" class="footer-quicklinks">
+                        <a href="blog.html">Blog</a>
+                        <a href="#featured-work">Projects</a>
+                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href="#contact">Contact</a>
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Use</a>
+                        <a href="#sitemap">Sitemap</a>
+                    </nav>
+                    <div class="footer-social" style="margin-top:0.5rem;">
+                        <a href="https://github.com/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Mpurushotham">
+                            <img src="https://img.shields.io/badge/GitHub-Mpurushotham-181717?style=for-the-badge&logo=github" alt="GitHub - Mpurushotham">
+                        </a>
+                        <a href="https://linkedin.com/in/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Mpurushotham">
+                            <img src="https://img.shields.io/badge/LinkedIn-Mpurushotham-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn - Mpurushotham">
+                        </a>
+                        <a href="mailto:purushotham.muktha@gmail.com" aria-label="Send email to purushotham.muktha@gmail.com">
+                            <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail" alt="Email - purushotham.muktha@gmail.com">
+                        </a>
+                        <a href="https://wa.me/+46764561036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
+                            <img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp - Chat Now">
+                        </a>
+                    </div>
+                    <!-- <a href="https://templatemo.com" target="_blank" rel="noopener nofollow">Provided by TemplateMo</a> -->                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

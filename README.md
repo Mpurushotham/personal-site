@@ -1,5 +1,6 @@
 # Welcome to my personal website repo
+----
 
-site will be launching soon...
+Site draft version is launched...!  updates will be added regularly. 
 
 

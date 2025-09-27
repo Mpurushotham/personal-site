@@ -1,0 +1,13 @@
+# Node modules and build artifacts
+node_modules/
+dist/
+build/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment and config files
+.env
+*.local

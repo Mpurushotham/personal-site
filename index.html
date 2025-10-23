@@ -17,9 +17,9 @@ https://templatemo.com/tm-593-personal-shape
 -->
 
 <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio & Blog</title>
-
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+      <!-- <title>Personal Portfolio & Blog</title>
+-->
     <!--
       SECTION: STYLING
       - The first script loads TailwindCSS, a utility-first CSS framework for rapid UI development.
@@ -77,6 +77,7 @@ https://templatemo.com/tm-593-personal-shape
         "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
         "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
         "dompurify": "https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.es.mjs"
+        "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/"
       }
     }
     </script>
@@ -101,15 +102,24 @@ https://templatemo.com/tm-593-personal-shape
     <script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="https://unpkg.com/html-to-docx@1.8.0/dist/html-to-docx.js"></script>
     
+  <!--
+      SECTION: BROWSER-BASED COMPILER (BABEL)
+      - This script is the FIX. It transpiles (converts) TSX/JSX code into plain JavaScript
+        that the browser can understand.
+      - This is necessary because we are loading .tsx files directly without a build step.
+    -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
     <!--
       SECTION: APPLICATION ENTRY SCRIPT
       - This is the final and most important script.
       - It loads and executes the main application file (index.tsx).
-      - `type="module"` is essential for using 'import' statements.
+      - `type="text/babel"` tells the Babel script to process this file.
+      - `data-type="module"` is essential for using 'import' statements.
     -->
-    <script type="module" src="/index.tsx"></script>
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
   </body>
-  
+
 <body>
     <a class="skip-link visually-hidden" href="#main" aria-label="Skip to main content">Skip to main content</a>
     <!-- Navigation -->

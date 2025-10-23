@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { auth } from '../firebaseConfig';
-import { onAuthStateChanged, signInWithEmailAndPassword, signOut, User } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
 
 
 interface AuthContextType {

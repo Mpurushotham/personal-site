@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { auth } from '../firebaseConfig';
-import { onAuthStateChanged, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
+// FIX: Replaced local firebase/auth import with a CDN URL import to fix module resolution errors.
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut, User } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 
 
 interface AuthContextType {

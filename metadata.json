@@ -1,0 +1,5 @@
+{
+  "name": "Personal Portfolio & Blog",
+  "description": "A personal portfolio website with a fully functional client-side blog. It features a secure admin area for creating, editing, and managing articles, a subscriber list viewer, and a user-facing subscription form. All data is stored locally in the browser, enabling a serverless experience hosted on static platforms like GitHub Pages.",
+  "requestFramePermissions": []
+}

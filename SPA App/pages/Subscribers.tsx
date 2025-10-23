@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getSubscribers } from '../services/subscriberService';
+import { getSubscribers } from '../SPA App/services/subscriberService';
 
 const Subscribers: React.FC = () => {
   const [subscribers, setSubscribers] = useState<string[]>([]);

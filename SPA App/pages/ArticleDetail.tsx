@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getArticleById } from '../services/articleService';
+import { getArticleById } from '../SPA App/services/articleService';
 import { Article } from '../types';
 import { useAuth } from '../hooks/useAuth';
 import { marked } from 'marked';

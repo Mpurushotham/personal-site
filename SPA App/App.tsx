@@ -4,11 +4,11 @@ import { AuthProvider, useAuth } from './hooks/useAuth';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Blog from './pages/Blog';
-import ArticleDetail from './pages/ArticleDetail';
-import Login from './pages/Login';
-import AdminDashboard from './pages/AdminDashboard';
-import Editor from './pages/Editor';
-import Subscribers from './pages/Subscribers';
+import ArticleDetail from '../pages/ArticleDetail';
+import Login from '../pages/Login';
+import AdminDashboard from '../pages/AdminDashboard';
+import Editor from '../pages/Editor';
+import Subscribers from '../pages/Subscribers';
 
 const ProtectedRoute: React.FC<{ children: React.ReactElement }> = ({ children }) => {
   const { isAuthenticated, loading } = useAuth();

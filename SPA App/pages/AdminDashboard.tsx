@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { getArticles, deleteArticle, toggleFeaturedStatus } from '../services/articleService';
+import { getArticles, deleteArticle, toggleFeaturedStatus } from '../SPA App/services/articleService';
 import { Article } from '../types';
 
 const StarIcon: React.FC<{ className?: string }> = ({ className }) => (

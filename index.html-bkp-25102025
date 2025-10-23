@@ -11,19 +11,16 @@
 TemplateMo 593 personal shape
 https://templatemo.com/tm-593-personal-shape
 -->
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
-    "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/",
-    "marked": "https://aistudiocdn.com/marked@^16.4.1",
-    "dompurify": "https://aistudiocdn.com/dompurify@^3.3.0"
-  }
-}
-</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description"
+        content="Muktha Purushotham - Cloud DevSecOps Architect, Infra & Cybersecurity Solution Architect. Specializing in cloud infrastructure, DevSecOps automation, and cybersecurity solutions.">
+    <meta name="keywords"
+        content="Muktha Purushotham, Cloud Architect, DevSecOps Engineer, Cybersecurity Specialist, Cloud Infrastructure, DevOps Automation, Cloud Security, Multi-Cloud Solutions, Kubernetes, CI/CD Pipelines, Infrastructure as Code, SRE, LLM Infrastructure">
+    <meta name="author" content="Muktha Purushotham">
 </head>
 
 <body>

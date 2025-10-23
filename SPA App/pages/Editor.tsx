@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { saveArticle, getArticleById } from '../services/articleService';
+import { saveArticle, getArticleById } from '../SPA App/services/articleService';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 

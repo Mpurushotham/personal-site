@@ -1,98 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog — Muktha Purushotham</title>
-  <link href="templatemo-personal-style.css" rel="stylesheet">
-  <link rel="icon" href="images/about-me-photo.jpeg" type="image/jpeg">
-  <style>.blog-listing { max-width: 900px; margin: 0 auto; } .blog-card { background: #fff; border: 1px solid #e6e9ee; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: var(--shadow-md); transition: transform 0.3s ease, box-shadow 0.3s ease; } .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); } .blog-card h3 { margin-top: 0; font-size: 1.75rem; } .blog-card a { text-decoration: none; color: inherit; } .blog-card-meta { font-size: 0.9rem; color: #64748b; margin-bottom: 1rem; } .blog-card-excerpt { margin-bottom: 1.5rem; } .read-more-btn { display: inline-block; font-weight: 600; color: var(--primary-color); text-decoration: none; } .read-more-btn:hover { text-decoration: underline; }</style>
-</head>
-<body>
-  <a class="skip-link visually-hidden" href="#main" aria-label="Skip to main content">Skip to main content</a>
-  <nav id="navbar" role="navigation" aria-label="Blog navigation">
-    <div class="nav-container">
-      <div class="logo">Muktha Purushotham</div>
-      <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="index.html#about-proven">About</a></li>
-        <li><a href="index.html#portfolio">Skills</a></li>
-        <li><a href="blog.html" aria-current="page">Blog</a></li>
-        <li><a href="casestudies.html">Case Studies</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio & Blog</title>
 
-  <main id="main">
-    <header class="container">
-      <h1 class="section-title">From the Blog</h1>
-      <p class="lead muted" style="text-align: center;">Insights on cloud architecture, DevSecOps, and modern security practices.</p>
-    </header>
+    <!--
+      SECTION: STYLING
+      - The first script loads TailwindCSS, a utility-first CSS framework for rapid UI development.
+      - The inline script block contains the configuration for Tailwind, defining custom colors and fonts.
+      - The <link> tag imports the 'Inter' font family used throughout the site.
+      - The <style> block contains minor custom CSS adjustments.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#1a1a1a',
+              'secondary': '#2a2a2a',
+              'accent': '#00ff99',
+              'text-main': '#e0e0e0',
+              'text-secondary': '#a0a0a0',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+      .no-copy {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+      .prose img {
+        border-radius: 0.5rem;
+      }
+      .prose a {
+        color: #00ff99;
+        text-decoration: underline;
+      }
+    </style>
 
-    <section class="container blog-listing">
+    <!--
+      SECTION: JAVASCRIPT MODULE LOADER (IMPORT MAP)
+      - This is CRITICAL for the React application to work.
+      - It tells the browser how to resolve module names like 'react' or 'react-router-dom'
+        to full CDN URLs. Without this, the 'import' statements in the .tsx files would fail.
+    -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+        "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
+        "dompurify": "https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.es.mjs",
+        "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-primary text-text-main">
+    <!--
+      SECTION: REACT MOUNT POINT
+      - This div is the entry point for the entire React application.
+      - The JavaScript code will find this element by its ID and render all components inside it.
+      - DO NOT REMOVE OR RENAME THIS DIV.
+    -->
+    <div id="root"></div>
 
-      <!-- Blog Post 1 -->
-      <article class="blog-card">
-        <a href="blog-post-microsoft-security.html">
-          <h3>Demystifying the Microsoft Security Ecosystem</h3>
-        </a>
-        <p class="blog-card-meta">Published on May 26, 2025 • 5 min read</p>
-        <p class="blog-card-excerpt">
-          A guide to integrated threat defense using Microsoft Sentinel, Defender, Entra, and Purview to secure your entire digital estate from end to end.
-        </p>
-        <a href="blog-post-microsoft-security.html" class="read-more-btn">Read More &rarr;</a>
-      </article>
-
-      <!-- Blog Post 2 -->
-      <article class="blog-card">
-        <a href="blog-post-devsecops.html">
-          <h3>DevSecOps Automation — A Practical Blueprint</h3>
-        </a>
-        <p class="blog-card-meta">Published on October 15, 2024 • 4 min read</p>
-        <p class="blog-card-excerpt">
-          Practical guidance and a downloadable example pipeline to help you get started with DevSecOps automation and shift-left security.
-        </p>
-        <a href="blog-post-devsecops.html" class="read-more-btn">Read More &rarr;</a>
-      </article>
-      
-    </section>
-  </main>
-
-  <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <p>&copy; 2025. Designed and Developed by <a href="https://purushothammuktha.com" style="font-family: 'Courier New', Courier, monospace; font-size: larger;color: peru;"><b>Purushotham Muktha</b></a>. All rights reserved.</p>
-                </div>
-                <div class="footer-right">
-                    <nav aria-label="Footer quick links" class="footer-quicklinks">
-                        <a href="blog.html">Blog</a>
-                        <a href="#featured-work">Projects</a>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#privacy">Privacy Policy</a>
-                        <a href="#terms">Terms of Use</a>
-                        <a href="#sitemap">Sitemap</a>
-                    </nav>
-                    <div class="footer-social" style="margin-top:0.5rem;">
-                        <a href="https://github.com/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Mpurushotham">
-                            <img src="https://img.shields.io/badge/GitHub-Mpurushotham-181717?style=for-the-badge&logo=github" alt="GitHub - Mpurushotham">
-                        </a>
-                        <a href="https://linkedin.com/in/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Mpurushotham">
-                            <img src="https://img.shields.io/badge/LinkedIn-Mpurushotham-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn - Mpurushotham">
-                        </a>
-                        <a href="mailto:purushotham.muktha@gmail.com" aria-label="Send email to purushotham.muktha@gmail.com">
-                            <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail" alt="Email - purushotham.muktha@gmail.com">
-                        </a>
-                        <a href="https://wa.me/+46764561036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
-                            <img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp - Chat Now">
-                        </a>
-                    </div>
-                    <!-- <a href="https://templatemo.com" target="_blank" rel="noopener nofollow">Provided by TemplateMo</a> -->                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+    <!--
+      SECTION: EXTERNAL LIBRARIES
+      - These scripts provide functionality for exporting articles to PDF and DOCX formats.
+      - They are loaded here to be available globally in the application.
+    -->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/html-to-docx@1.8.0/dist/html-to-docx.js"></script>
+    
+    <!--
+      SECTION: BROWSER-BASED COMPILER (BABEL)
+      - This script transpiles (converts) TSX/JSX code into plain JavaScript
+        that the browser can understand.
+      - This is necessary because we are loading .tsx files directly without a build step.
+    -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!--
+      SECTION: APPLICATION ENTRY SCRIPT
+      - This is the final and most important script.
+      - It loads and executes the main application file (index.tsx).
+      - `type="text/babel"` tells the Babel script to process this file.
+      - `data-type="module"` is essential for using 'import' statements.
+    -->
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+  </body>
 </html>

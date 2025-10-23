@@ -3,8 +3,7 @@ import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './hooks/useAuth';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import TechArticles from './pages/TechArticles';
+import Blog from './pages/Blog';
 import ArticleDetail from './pages/ArticleDetail';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
@@ -29,9 +28,8 @@ const App: React.FC = () => {
           <Header />
           <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/tech-newsletters" element={<TechArticles />} />
-              <Route path="/tech-newsletters/:id" element={<ArticleDetail />} />
+              <Route path="/" element={<Blog />} />
+              <Route path="/article/:id" element={<ArticleDetail />} />
               <Route path="/login" element={<Login />} />
               <Route path="/admin" element={
                 <ProtectedRoute>

@@ -26,7 +26,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
   }`;
 
   return (
-    <Link to={`/tech-newsletters/${article.id}`} className="block group h-full">
+    <Link to={`/article/${article.id}`} className="block group h-full">
       <div className={cardClasses}>
         {article.isFeatured && (
           <div className="absolute top-3 right-3 flex items-center gap-1 bg-accent text-primary px-2 py-1 rounded-full text-xs font-bold z-10">

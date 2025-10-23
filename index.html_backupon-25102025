@@ -7,24 +7,118 @@
     <title>Muktha Purushotham-Cloud DevSecOps,Infra & Cybersecurity Solution Architect</title>
     <link href="templatemo-personal-style.css" rel="stylesheet">
     <link rel="icon" href="images/about-me-photo.jpeg" type="image/jpeg">
+
     <!--
+
 TemplateMo 593 personal shape
+
 https://templatemo.com/tm-593-personal-shape
+
 -->
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
-    "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/",
-    "marked": "https://aistudiocdn.com/marked@^16.4.1",
-    "dompurify": "https://aistudiocdn.com/dompurify@^3.3.0"
-  }
-}
-</script>
+
+<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <!--  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+      <!-- <title>Personal Portfolio & Blog</title>
+-->
+    <!--
+      SECTION: STYLING
+      - The first script loads TailwindCSS, a utility-first CSS framework for rapid UI development.
+      - The inline script block contains the configuration for Tailwind, defining custom colors and fonts.
+      - The <link> tag imports the 'Inter' font family used throughout the site.
+      - The <style> block contains minor custom CSS adjustments.
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#1a1a1a',
+              'secondary': '#2a2a2a',
+              'accent': '#00ff99',
+              'text-main': '#e0e0e0',
+              'text-secondary': '#a0a0a0',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+      .no-copy {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+      .prose img {
+        border-radius: 0.5rem;
+      }
+      .prose a {
+        color: #00ff99;
+        text-decoration: underline;
+      }
+    </style>
+
+    <!--
+      SECTION: JAVASCRIPT MODULE LOADER (IMPORT MAP)
+      - This is CRITICAL for the React application to work.
+      - It tells the browser how to resolve module names like 'react' or 'react-router-dom'
+        to full CDN URLs. Without this, the 'import' statements in the .tsx files would fail.
+    -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+        "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
+        "dompurify": "https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.es.mjs"
+        "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/"
+      }
+    }
+    </script>
+    
+
 </head>
+ <body class="bg-primary text-text-main">
+    <!--
+      SECTION: REACT MOUNT POINT
+      - This div is the entry point for the entire React application.
+      - The JavaScript code will find this element by its ID and render all components inside it.
+      - DO NOT REMOVE OR RENAME THIS DIV.
+    -->
+    <div id="root"></div>
+
+    <!--
+      SECTION: EXTERNAL LIBRARIES
+      - These scripts provide functionality for exporting articles to PDF and DOCX formats.
+      - They are loaded here to be available globally in the application.
+    -->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/html-to-docx@1.8.0/dist/html-to-docx.js"></script>
+    
+  <!--
+      SECTION: BROWSER-BASED COMPILER (BABEL)
+      - This script is the FIX. It transpiles (converts) TSX/JSX code into plain JavaScript
+        that the browser can understand.
+      - This is necessary because we are loading .tsx files directly without a build step.
+    -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!--
+      SECTION: APPLICATION ENTRY SCRIPT
+      - This is the final and most important script.
+      - It loads and executes the main application file (index.tsx).
+      - `type="text/babel"` tells the Babel script to process this file.
+      - `data-type="module"` is essential for using 'import' statements.
+    -->
+    <script type="text/babel" data-type="module" src="/index.tsx"></script>
+  </body>
 
 <body>
     <a class="skip-link visually-hidden" href="#main" aria-label="Skip to main content">Skip to main content</a>
@@ -488,6 +582,10 @@ https://templatemo.com/tm-593-personal-shape
     </section>
     </main>
 
+   
+
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -527,4 +625,10 @@ https://templatemo.com/tm-593-personal-shape
     <script src="templatemo-personal-javascripts.js"></script>
 
 </body>
+
+
 </html>
+
+
+
+

@@ -84,7 +84,7 @@ const ArticleDetail: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto bg-secondary p-6 sm:p-8 lg:p-10 rounded-lg shadow-lg">
       <div className="flex justify-between items-center mb-4 flex-wrap gap-4">
-        <Link to="/tech-newsletters" className="text-accent hover:underline">&larr; Back to Newsletters</Link>
+        <Link to="/" className="text-accent hover:underline">&larr; Back to Blog</Link>
         {isAuthenticated && (
           <div className="flex gap-2">
             <Link to={`/admin/editor/${article.id}`} className="bg-accent text-primary font-bold py-2 px-4 rounded-md hover:bg-opacity-80 text-sm transition-colors">Edit</Link>

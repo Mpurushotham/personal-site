@@ -5,526 +5,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muktha Purushotham-Cloud DevSecOps,Infra & Cybersecurity Solution Architect</title>
-    <link href="templatemo-personal-style.css" rel="stylesheet">
     <link rel="icon" href="images/about-me-photo.jpeg" type="image/jpeg">
+    <link href="templatemo-personal-style.css" rel="stylesheet">
+    
     <!--
-TemplateMo 593 personal shape
-https://templatemo.com/tm-593-personal-shape
--->
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
-    "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/",
-    "marked": "https://aistudiocdn.com/marked@^16.4.1",
-    "dompurify": "https://aistudiocdn.com/dompurify@^3.3.0"
-  }
-}
-</script>
+      SECTION: STYLING (from SPA)
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#1a1a1a',
+              'secondary': '#2a2a2a',
+              'accent': '#00ff99',
+              'text-main': '#e0e0e0',
+              'text-secondary': '#a0a0a0',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+      .no-copy {
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+      }
+      .prose img {
+        border-radius: 0.5rem;
+      }
+      .prose a {
+        color: #00ff99;
+        text-decoration: underline;
+      }
+    </style>
+
+    <!--
+      SECTION: JAVASCRIPT MODULE LOADER (IMPORT MAP)
+    -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+        "marked": "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js",
+        "dompurify": "https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.es.mjs",
+        "firebase/": "https://aistudiocdn.com/firebase@^12.4.0/"
+      }
+    }
+    </script>
 </head>
 
-<body>
-    <a class="skip-link visually-hidden" href="#main" aria-label="Skip to main content">Skip to main content</a>
-    <!-- Navigation -->
-    <nav id="navbar" role="navigation" aria-label="Primary Navigation">
-        <div class="nav-container">
-            <div class="logo"> <a href="index.html">Muktha Purushotham</a></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-proven">About</a></li>
-                <li><a href="#portfolio">Skills</a></li>
-                <li><a href="blog.html">Tech Newsletters</a></li>
-                <li><a href="casestudies.html">Case Studies</a></li>
-                <!--  <li><a href="project-enquiry.html">Project Enquiry</a></li> --->
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-menu-toggle" id="mobileMenuToggle" role="button" aria-controls="mobileMenu" aria-expanded="false" aria-label="Open mobile menu" tabindex="0">
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-                <div class="hamburger"></div>
-            </div>
-        </div>
-    </nav>
+<body class="bg-primary text-text-main">
+    <!--
+      SECTION: REACT MOUNT POINT
+      - This div is the entry point for the entire React application.
+    -->
+    <div id="root"></div>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about-proven">About</a></li>                
-            <li><a href="#portfolio">Skills</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="casestudies.html">Case Studies</a></li>
-           <!--  <li><a href="project-enquiry.html">Project Enquiry</a></li> --->
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
-    <main id="main" role="main">
-
-    <!-- Hero Section -->
-    <section id="home" class="hero" role="region" aria-labelledby="home-heading">
-        <h2 id="home-heading" class="visually-hidden">Home</h2>
-    <div class="floating-shapes" aria-hidden="true">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-            <div class="shape shape-6"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-subtitle" style="color: darkgreen;">$ deploy-Cloud-ai-infrastructure --optimize=true
-                --scale=auto</div>
-            <h1 class="typewriter" style="color: black; font-family: 'Courier';">Muktha@CloudDevSecOps:~$</h1>
-            <h1>whoami</h1>
-            <h2><a style="color: rgb(60, 185, 10); font-size: larger; font-family: 'Courier New', Courier, monospace;"
-                    class="typewrite" data-period="2000"
-                    data-type='[ "> Cloud Solution Architect", "> DevSecOps Architect", "> Cybersecurity Architect", "> Cloud & Infra Platform Specialist" ]'>
-                    <span class="wrap"></span></a>
-            </h2>
-            <br>
-            <h3>Architecting cloud solutions reliable, high-performance, and cloud-native platforms with focus on
-                DevSecOps automation, security, and scalability.
-                Whether it's deploying Kubernetes clusters, optimizing CI/CD pipelines, or securing cloud workloads, I
-                help clients with purpose.
-            </h3> </br>
-            <a href="#portfolio" class="cta-button">Explore My Work</a>
-            <a href="#contact" class="cta-button">Get In Touch<i class="fa fa-envelope"></i></a>
-            <div class="social-badges" aria-label="Social and contact links" style="margin-top:1rem;">
-                <a href="https://github.com/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Mpurushotham">
-                    <img src="https://img.shields.io/badge/GitHub-Mpurushotham-181717?style=for-the-badge&logo=github" alt="GitHub - Mpurushotham">
-                </a>
-                <a href="https://linkedin.com/in/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Mpurushotham">
-                    <img src="https://img.shields.io/badge/LinkedIn-Mpurushotham-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn - Mpurushotham">
-                </a>
-                <a href="mailto:purushotham.muktha@gmail.com" aria-label="Send email to purushotham.muktha@gmail.com">
-                    <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail" alt="Email - purushotham.muktha@gmail.com">
-                </a>
-                <a href="https://wa.me/+46764561036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
-                    <img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp - Chat Now">
-                </a>
-            </div>
-        </div>
-    <div class="scroll-indicator" role="button" tabindex="0" aria-label="Scroll to about section" onclick="document.getElementById('about-proven').scrollIntoView()"></div>
-    </section>
-    <!-- (About section removed; replaced by About Proven section above) -->
-<!-- About Proven Impact Section -->
-    <section id="about-proven" class="about-proven" role="region" aria-labelledby="about-heading">
-        <h2 id="about-heading" class="visually-hidden">About Proven</h2>
-        <div class="container">
-            <h2 class="section-title fade-in">DevSecOps Engineer & Infra Platform Architect</h2>
-            <p class="lead muted" style="text-align:center; max-width:800px; margin: 1rem auto 2rem;">I build scalable cloud infrastructure and automate deployment pipelines that power innovation at scale.</p>
-
-            <div class="proven-grid">
-                <div class="proven-left">
-                    <div class="stat-cards">
-                        <div class="stat-card">
-                            <div class="stat-value">15+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">10+</div>
-                            <div class="stat-label">Projects Delivered</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value">99.9%</div>
-                            <div class="stat-label">Uptime Achieved</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="proven-right">
-                        <div class="feature-cards">
-                        <div class="feature-card">
-                            <span class="feature-icon"> <!-- cloud icon -->
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 17.58A4 4 0 0016 14h-1.26A6 6 0 106 17.5" stroke="#4FACFE" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <span class="feature-text">Multi-Cloud Architecture</span>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon"> <!-- pipeline icon -->
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M4 12h10M4 17h7" stroke="#06B6D4" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <span class="feature-text">CI/CD Automation</span>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon"> <!-- shield icon -->
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l7 4v6c0 5-3.58 9.74-7 10-3.42-.26-7-5-7-10V6l7-4z" stroke="#FF6B6B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <span class="feature-text">Security & Compliance</span>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon"> <!-- monitor icon -->
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="12" rx="2" stroke="#8B5CF6" stroke-width="1.4"/><path d="M8 20h8" stroke="#8B5CF6" stroke-width="1.4" stroke-linecap="round"/></svg>
-                            </span>
-                            <span class="feature-text">Monitoring & Alerts</span>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon"> <!-- code icon -->
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 18l6-6-6-6" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 6l-6 6 6 6" stroke="#F59E0B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <span class="feature-text">Infrastructure as Code</span>
-                        </div>
-                        <div class="feature-card">
-                            <span class="feature-icon"> <!-- lightning icon -->
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 2L3 14h7l-1 8L21 10h-7l-1-8z" stroke="#F59E0B" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </span>
-                            <span class="feature-text">Performance Optimization</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="impact-bar">
-                <h3>Proven Impact</h3>
-                <div class="impact-grid">
-                    <div class="impact-item">
-                        <div class="impact-value">75%</div>
-                        <div class="impact-label">Faster Deployments</div>
-                    </div>
-                    <div class="impact-item">
-                        <div class="impact-value">40%</div>
-                        <div class="impact-label">Cost Reduction</div>
-                    </div>
-                    <div class="impact-item">
-                        <div class="impact-value">95%</div>
-                        <div class="impact-label">Fewer Incidents</div>
-                    </div>
-                    <div class="impact-item">
-                        <div class="impact-value">2x</div>
-                        <div class="impact-label">Team Productivity</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-   
-    <!-- portfolio Section -->
-    <!-- Skills & Ecosystem Section -->
-     
-    <section id="portfolio" class="skills-section" role="region" aria-labelledby="skills-heading">
-        <h2 id="skills-heading" class="visually-hidden">Skills and Ecosystem</h2>
-        <div class="container">
-            <h2><div class="hero-subtitle" style="color: darkgreen;"><center>$ GREP -R "expertise" /var/log/career.log</center></div></h2>
-            <h1 class="section-title fade-in">./skills --list --verbose</h1><br>
-            <p class="lead muted" style="text-align:center; max-width:900px; margin:0.75rem auto 2rem;"> > A comprehensive areas of modern DevOps, SRE, and AI/ML infrastructure tools</p>
-
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="#4FACFE" stroke-width="1.6"/></svg></div>
-                    <h4>Site Reliability Engineering</h4>
-                    <p class="muted small">Building resilient systems with 99.9% uptime, chaos engineering, and automated incident response</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3.58 9.74-7 10-3.42-.26-7-5-7-10V6l7-4z" stroke="#06B6D4" stroke-width="1.6"/></svg></div>
-                    <h4>Kubernetes &amp; Orchestration</h4>
-                    <p class="muted small">K8s cluster management, service mesh, auto-scaling, and cloud-native application deployment</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h10M4 17h7" stroke="#8B5CF6" stroke-width="1.6"/></svg></div>
-                    <h4>GitOps &amp; CI/CD</h4>
-                    <p class="muted small">ArgoCD, Flux, Tekton pipelines with automated testing, security scanning, and progressive deployments</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 17.58A4 4 0 0016 14h-1.26A6 6 0 106 17.5" stroke="#4FACFE" stroke-width="1.6"/></svg></div>
-                    <h4>Multi-Cloud Architecture</h4>
-                    <p class="muted small">AWS, GCP, Azure expertise with hybrid cloud strategies and cloud-agnostic solutions</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M16 18l6-6-6-6" stroke="#F59E0B" stroke-width="1.6"/></svg></div>
-                    <h4>Infrastructure as Code</h4>
-                    <p class="muted small">Terraform, Crossplane, Pulumi for immutable infrastructure and automated provisioning</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3.58 9.74-7 10-3.42-.26-7-5-7-10V6l7-4z" stroke="#34D399" stroke-width="1.6"/></svg></div>
-                    <h4>Security &amp; Compliance</h4>
-                    <p class="muted small">Zero-trust architecture, policy-as-code, vulnerability scanning with Falco, Trivy, and OPA</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h18" stroke="#8B5CF6" stroke-width="1.6"/></svg></div>
-                    <h4>Observability Stack</h4>
-                    <p class="muted small">Prometheus, Grafana, Jaeger, OpenTelemetry for full-stack monitoring and distributed tracing</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="#C084FC" stroke-width="1.6"/></svg></div>
-                    <h4>LLM Infrastructure</h4>
-                    <p class="muted small">Building ChatGPT-scale systems, RAG architectures, vector databases, and prompt engineering</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"> <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 4v6c0 5-3.58 9.74-7 10-3.42-.26-7-5-7-10V6l7-4z" stroke="#A78BFA" stroke-width="1.6"/></svg></div>
-                    <h4>AI Agents &amp; Automation</h4>
-                    <p class="muted small">Autonomous agents, LangChain/LlamaIndex orchestration, and intelligent workflows</p>
-                </div>
-            </div>
-
-            <div class="container"><h1 class="section-title fade-in" >&gt; cat /etc/tech-ecosystem.conf</h1></div><br>
-                <p class="lead muted" style="text-align:center; max-width:900px; margin:0.75rem auto 2rem;"> > Enterprise production-ready tools across the SDLC and IaC Lifecycle </p><br>
-                <div class="ecosystem-row" role="list" aria-label="Tech ecosystem categories">
-                <div class="ecosystem-box infra reveal-target">
-                    <h5>
-                        <!-- cloud icon -->
-                        <svg class="ecosystem-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 17.58A4 4 0 0016 14h-1.26A6 6 0 106 17.5" stroke="#10b981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        INFRASTRUCTURE
-                    </h5>
-                        <div class="chips" role="list" aria-label="Infrastructure tools">
-                        <span class="chip reveal-target icon-kubernetes" data-initial="K8" data-logo="images/icons/kubernetes.svg" aria-label="Kubernetes" tabindex="0">Kubernetes</span>
-                        <span class="chip reveal-target icon-docker" data-initial="Dk" data-logo="images/icons/docker.svg" aria-label="Docker" tabindex="0">Docker</span>
-                        <span class="chip reveal-target icon-terraform" data-initial="Tf" data-logo="images/icons/terraform.svg" aria-label="Terraform" tabindex="0">Terraform</span>
-                        <span class="chip reveal-target" data-initial="An" data-logo="images/icons/ansible.svg" aria-label="Ansible" tabindex="0" style="--chip-logo: url('images/icons/ansible.svg')">Ansible</span>
-                        <span class="chip reveal-target" data-initial="He" data-logo="images/icons/helm.svg" aria-label="Helm" tabindex="0" style="--chip-logo: url('images/icons/helm.svg')">Helm</span>
-                        <span class="chip reveal-target" data-initial="Is" data-logo="images/icons/istio.svg" aria-label="Istio" tabindex="0" style="--chip-logo: url('images/icons/istio.svg')">Istio</span>
-                    </div>
-                </div>
-                <div class="ecosystem-box cicd reveal-target">
-                    <h5>
-                        <!-- pipeline icon -->
-                        <svg class="ecosystem-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h16M4 12h10M4 17h7" stroke="#60a5fa" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        CI/CD
-                    </h5>
-                    <div class="chips" role="list" aria-label="CI and CD tools">
-                        <span class="chip reveal-target" data-initial="Ar" data-logo="images/icons/argocd.svg" aria-label="ArgoCD" tabindex="0" style="--chip-logo: url('images/icons/argocd.svg')">ArgoCD</span>
-                        <span class="chip reveal-target" data-initial="GH" data-logo="images/icons/github-actions.svg" aria-label="GitHub Actions" tabindex="0" style="--chip-logo: url('images/icons/github-actions.svg')">GitHub Actions</span>
-                        <span class="chip reveal-target" data-initial="Jn" data-logo="images/icons/jenkins.svg" aria-label="Jenkins" tabindex="0" style="--chip-logo: url('images/icons/jenkins.svg')">Jenkins</span>
-                        <span class="chip reveal-target" data-initial="Tk" data-logo="images/icons/tekton.svg" aria-label="Tekton" tabindex="0" style="--chip-logo: url('images/icons/tekton.svg')">Tekton</span>
-                        <span class="chip reveal-target" data-initial="Fx" data-logo="images/icons/flux.svg" aria-label="Flux" tabindex="0" style="--chip-logo: url('images/icons/flux.svg')">Flux</span>
-                        <span class="chip reveal-target" data-initial="Sp" data-logo="images/icons/spinnaker.svg" aria-label="Spinnaker" tabindex="0" style="--chip-logo: url('images/icons/spinnaker.svg')">Spinnaker</span>
-                    </div>
-                </div>
-                <div class="ecosystem-box monitoring reveal-target">
-                    <h5>
-                        <!-- monitoring icon -->
-                        <svg class="ecosystem-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 12h18" stroke="#34d399" stroke-width="1.6"/></svg>
-                        MONITORING
-                    </h5>
-                    <div class="chips" role="list" aria-label="Monitoring and observability tools">
-                        <span class="chip reveal-target" data-initial="Pr" data-logo="images/icons/prometheus.svg" aria-label="Prometheus" tabindex="0" style="--chip-logo: url('images/icons/prometheus.svg')">Prometheus</span>
-                        <span class="chip reveal-target" data-initial="Gr" data-logo="images/icons/grafana.svg" aria-label="Grafana" tabindex="0" style="--chip-logo: url('images/icons/grafana.svg')">Grafana</span>
-                        <span class="chip reveal-target" data-initial="Jg" data-logo="images/icons/jaeger.svg" aria-label="Jaeger" tabindex="0" style="--chip-logo: url('images/icons/jaeger.svg')">Jaeger</span>
-                        <span class="chip reveal-target" data-initial="EL" data-logo="images/icons/elk.svg" aria-label="ELK" tabindex="0" style="--chip-logo: url('images/icons/elk.svg')">ELK</span>
-                        <span class="chip reveal-target" data-initial="Dd" data-logo="images/icons/datadog.svg" aria-label="Datadog" tabindex="0" style="--chip-logo: url('images/icons/datadog.svg')">Datadog</span>
-                        <span class="chip reveal-target" data-initial="OT" data-logo="images/icons/opentelemetry.svg" aria-label="OpenTelemetry" tabindex="0" style="--chip-logo: url('images/icons/opentelemetry.svg')">OpenTelemetry</span>
-                    </div>
-                </div>
-                <div class="ecosystem-box highlight ai reveal-target">
-                    <h5>
-                        <!-- ai icon -->
-                        <svg class="ecosystem-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="4" stroke="#c084fc" stroke-width="1.6"/></svg>
-                        AI/ML
-                    </h5>
-                    <div class="chips" role="list" aria-label="AI and ML tools">
-                        <span class="chip reveal-target" data-initial="OA" data-logo="images/icons/openai.svg" aria-label="OpenAI" tabindex="0" style="--chip-logo: url('images/icons/openai.svg')">OpenAI</span>
-                        <span class="chip reveal-target" data-initial="An" data-logo="images/icons/anthropic.svg" aria-label="Anthropic" tabindex="0" style="--chip-logo: url('images/icons/anthropic.svg')">Anthropic</span>
-                        <span class="chip reveal-target" data-initial="HF" data-logo="images/icons/huggingface.svg" aria-label="HuggingFace" tabindex="0" style="--chip-logo: url('images/icons/huggingface.svg')">HuggingFace</span>
-                        <span class="chip reveal-target" data-initial="LC" data-logo="images/icons/langchain.svg" aria-label="LangChain" tabindex="0" style="--chip-logo: url('images/icons/langchain.svg')">LangChain</span>
-                        <span class="chip reveal-target" data-initial="Pn" data-logo="images/icons/pinecone.svg" aria-label="Pinecone" tabindex="0" style="--chip-logo: url('images/icons/pinecone.svg')">Pinecone</span>
-                        <span class="chip reveal-target" data-initial="Wv" data-logo="images/icons/weaviate.svg" aria-label="Weaviate" tabindex="0" style="--chip-logo: url('images/icons/weaviate.svg')">Weaviate</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container"><h1 class="section-title fade-in" >&gt; find /industries -type f -name "*.experience" | head -12 </h1></div><br>
-            <div class="industries-row" role="list" aria-label="Industries served">
-                <span class="industry-chip" role="listitem">Cloud &amp; SaaS</span>
-                <span class="industry-chip" role="listitem">FinTech &amp; Banking</span>
-                <span class="industry-chip" role="listitem">Healthcare &amp; Biotech</span>
-                <span class="industry-chip" role="listitem">E-commerce &amp; Retail</span>
-                <span class="industry-chip" role="listitem">AI &amp; Machine Learning</span>
-                <span class="industry-chip" role="listitem">Manufacturing &amp; IoT</span>
-                <span class="industry-chip" role="listitem">EdTech &amp; Learning</span>
-                <span class="industry-chip" role="listitem">Gaming &amp; Entertainment</span>
-                <span class="industry-chip" role="listitem">Blockchain &amp; Web3</span>
-                <span class="industry-chip" role="listitem">Government &amp; Public</span>
-                <span class="industry-chip" role="listitem">Telecommunications</span>
-                <span class="industry-chip" role="listitem">Energy &amp; Utilities</span>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="featured-work" class="portfolio">
-        <div class="container">
-            <h2 class="section-title fade-in">Featured Work</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-image"></div>
-                    <div class="portfolio-content">
-                        <h4>Azure Cloud Migration</h4>
-                        <p>Led a large-scale migration of on-premise VMware workloads to Azure, focusing on cost-optimization, security, and operational excellence using Azure Migrate.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Azure Migrate</span>
-                            <span class="tech-tag">Terraform</span>
-                            <span class="tech-tag">Azure DevOps</span>
-                            <span class="tech-tag">PowerShell</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image"></div>
-                    <div class="portfolio-content">
-                        <h4>DevSecOps Pipeline Automation</h4>
-                        <p>Designed and implemented a secure CI/CD pipeline, integrating static analysis (SAST), dependency scanning, and policy-as-code to shift security left.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">GitHub Actions</span>
-                            <span class="tech-tag">Checkov</span>
-                            <span class="tech-tag">Trivy</span>
-                            <span class="tech-tag">ArgoCD</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image"></div>
-                    <div class="portfolio-content">
-                        <h4>Microsoft Security Hardening</h4>
-                        <p>Architected a zero-trust security model using Microsoft Sentinel, Defender, and Entra ID to provide integrated threat defense and automated response.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Microsoft Sentinel</span>
-                            <span class="tech-tag">Defender for Cloud</span>
-                            <span class="tech-tag">Entra ID</span>
-                            <span class="tech-tag">KQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image"></div>
-                    <div class="portfolio-content">
-                        <h4>Real-Time SOC Dashboard</h4>
-                        <p>Built a comprehensive Security Operations Center (SOC) dashboard in Grafana, visualizing real-time threat data from Prometheus and various security logs.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Grafana</span>
-                            <span class="tech-tag">Prometheus</span>
-                            <span class="tech-tag">Loki</span>
-                            <span class="tech-tag">SIEM</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image"></div>
-                    <div class="portfolio-content">
-                        <h4>Kubernetes Platform on Azure</h4>
-                        <p>Deployed a multi-tenant Kubernetes platform using EKS, Istio service mesh, and GitOps for automated, secure application delivery at scale.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Azure AKS</span>
-                            <span class="tech-tag">Istio</span>
-                            <span class="tech-tag">FluxCD</span>
-                            <span class="tech-tag">Crossplane</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-image"></div>
-                    <div class="portfolio-content">
-                        <h4>AI/ML Infrastructure with LLMs</h4>
-                        <p>Built scalable infrastructure to support Large Language Model (LLM) training and inference, using vector databases and RAG architecture for performance.</p>
-                        <div class="portfolio-tech">
-                            <span class="tech-tag">Azure ML</span>
-                            <span class="tech-tag">Kubeflow</span>
-                            <span class="tech-tag">Pinecone</span>
-                            <span class="tech-tag">LangChain</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!--
+      SECTION: EXTERNAL LIBRARIES
+    -->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://unpkg.com/html-to-docx@1.8.0/dist/html-to-docx.js"></script>
     
-
-    <!-- Contact Section -->
-    <!-- Blog moved to blog.html -->
-    <section id="contact" class="contact">
-    <div class="contact-floating-shapes" aria-hidden="true">
-            <div class="contact-shape contact-shape-1"></div>
-            <div class="contact-shape contact-shape-2"></div>
-            <div class="contact-shape contact-shape-3"></div>
-            <div class="contact-shape contact-shape-4"></div>
-            <div class="contact-shape contact-shape-5"></div>
-            <div class="contact-shape contact-shape-6"></div>
-        </div>
-        <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title fade-in">Let's Work Together</h2>
-                <p class="fade-in" style="color: aliceblue;">Ready to bring your vision to life? Let's discuss how we can create something amazing
-                    together. I'm always excited to take on new challenges and collaborate on innovative projects.</p>
-                <form id="contact-form" class="contact-form fade-in" data-to-email="purushotham.muktha@gmail.com">
-             <!--       <div class="form-group full-width">
-                        <label for="enquiry-type">What are you looking for?</label>
-                        <div class="radio-group">
-                            <a href="project-enquiry.html" class="radio-option">Project Inquiry</a>
-                            <label class="radio-option"><input type="radio" name="enquiry-type" value="Collaboration"> Collaboration / Partnership</label>
-                            <label class="radio-option"><input type="radio" name="enquiry-type" value="General Question" checked> General Question</label>
-                        </div>
-                    </div>    --->
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your full name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project..."
-                            required></textarea>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="submit" class="submit-btn">Send Message</button>
-                        <a href="https://calendly.com/purushotham-muktha/30min?" target="_blank" rel="noopener noreferrer" class="submit-btn secondary-btn">Schedule a Call</a>
-                    </div>
-                </form>
-                <!-- Live region for form status announcements -->
-                <div id="contact-status" class="visually-hidden" aria-live="polite" aria-atomic="true"></div>
-            </div>
-        </div>
-    </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <p>&copy; 2025. Designed and Developed by <a href="https://purushothammuktha.com" style="font-family: 'Courier New', Courier, monospace; font-size: larger;color: peru;"><b>Purushotham Muktha</b></a>. All rights reserved.</p>
-                </div>
-                <div class="footer-right">
-                    <nav aria-label="Footer quick links" class="footer-quicklinks">
-                        <a href="blog.html">Blog</a>
-                        <a href="#featured-work">Projects</a>
-                        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                        <a href="#contact">Contact</a>
-                        <a href="#privacy">Privacy Policy</a>
-                        <a href="#terms">Terms of Use</a>
-                        <a href="#sitemap">Sitemap</a>
-                    </nav>
-                    <div class="footer-social" style="margin-top:0.5rem;">
-                        <a href="https://github.com/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="GitHub - Mpurushotham">
-                            <img src="https://img.shields.io/badge/GitHub-Mpurushotham-181717?style=for-the-badge&logo=github" alt="GitHub - Mpurushotham">
-                        </a>
-                        <a href="https://linkedin.com/in/Mpurushotham" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - Mpurushotham">
-                            <img src="https://img.shields.io/badge/LinkedIn-Mpurushotham-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn - Mpurushotham">
-                        </a>
-                        <a href="mailto:purushotham.muktha@gmail.com" aria-label="Send email to purushotham.muktha@gmail.com">
-                            <img src="https://img.shields.io/badge/Email-Contact%20Me-red?style=for-the-badge&logo=gmail" alt="Email - purushotham.muktha@gmail.com">
-                        </a>
-                        <a href="https://wa.me/+46764561036" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp chat">
-                            <img src="https://img.shields.io/badge/WhatsApp-Chat%20Now-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp - Chat Now">
-                        </a>
-                    </div>
-                    <!-- <a href="https://templatemo.com" target="_blank" rel="noopener nofollow">Provided by TemplateMo</a> -->                </div>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Original site's javascript for animations -->
     <script src="templatemo-personal-javascripts.js"></script>
-
+    
+    <!--
+      SECTION: BROWSER-BASED COMPILER (BABEL)
+    -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!--
+      SECTION: APPLICATION ENTRY SCRIPT
+    -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
 </body>
 </html>

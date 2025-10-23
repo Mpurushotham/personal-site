@@ -45,7 +45,8 @@ To deploy via GitHub Pages:
 # 📄 License
 
 This project is licensed under the [MIT License](https://copilot.microsoft.com/chats/m7szhhQF8MdrzuCL6giA7#:~:text=MIT-,License,-.%20Feel%20free). Feel free to use and modify with attribution.
->[!IMPORTANT] > AFTER TAKEN WRITTEN APPROVALs YOU ARE FREE TO USE. 
+>[!IMPORTANT]
+> AFTER TAKING WRITTEN APPROVALS FROM OWNER OF THE SITE- YOU ARE FREE TO USE. 
 
 ✨ Author
 Mpurushotham 

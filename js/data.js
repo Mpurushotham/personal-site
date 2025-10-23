@@ -21,7 +21,7 @@ All data for this blog is now managed in a simple JavaScript file, making the si
     {
         id: 'understanding-react-hooks',
         title: 'A Deep Dive into React Hooks',
-        content: `React Hooks have revolutionized how we write components. In this article, we will explore \`useState\`, \`useEffect\`, and \`useContext\` with practical examples to help you master them. 
+        content: `OKAY.  React Hooks have revolutionized how we write components. In this article, we will explore \`useState\`, \`useEffect\`, and \`useContext\` with practical examples to help you master them. 
 We will also touch on custom hooks to encapsulate reusable logic.
 ### useState
 \`\`\`javascript

@@ -6,8 +6,8 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useRef, useMemo } from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter, Routes, Route, Navigate, NavLink, useNavigate, useParams, Link } from 'react-router-dom';
-import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, User } from "firebase/auth";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut, User } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 
